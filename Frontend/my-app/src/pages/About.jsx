@@ -155,7 +155,7 @@ const About = () => {
                 {/* ↓ swap this div for your actual image */}
                 {/* <img src="/girl.png" alt="Sakhi AI" className="w-full h-full object-cover object-top" /> */}
                 <div className="">
-                  <img src="/girl.png" alt="" srcset="" />
+                  <img src="/girl.png" alt="" srcSet="" />
                 </div>
               </div>
             </div>

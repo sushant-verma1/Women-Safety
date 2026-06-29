@@ -13,6 +13,8 @@ import Navbar from "../components/Navbar";
 import StepCard from "../components/StepCard";
 import TelegramIcon from "../components/Telegram";
 
+const TELEGRAM_BOT_URL = "t.me/women_safety_assistant_bot"
+
 const steps = [
   {
     number: "01",
@@ -317,7 +319,12 @@ const HomePage = () => {
         </section>
 
         {/* Telegram Bot CTA */}
-        <section className="relative mx-3 rounded-3xl bg-gradient-to-b from-purple-50 to-white px-3 py-8 sm:mx-4 sm:px-4 sm:py-10 md:mx-8 md:px-5 md:py-10 lg:mx-40 lg:px-6 lg:py-15">
+        <section onClick={() =>
+                  window.open(
+                    "https://t.me/women_safety_assistant_bot",
+                    "_blank"
+                  )
+                } className="relative mx-3 rounded-3xl bg-gradient-to-b from-purple-50 to-white px-3 py-8 sm:mx-4 sm:px-4 sm:py-10 md:mx-8 md:px-5 md:py-10 lg:mx-40 lg:px-6 lg:py-15">
           <div className="mx-auto max-w-6xl">
             <div className="relative overflow-hidden rounded-3xl p-4 backdrop-blur-base sm:p-5 md:p-6">
               {/* Decorative sparkles */}
@@ -328,8 +335,13 @@ const HomePage = () => {
                 ✨
               </div>
 
-              <div className="grid items-center gap-6 px-2 sm:grid-cols-1 sm:px-3 md:grid-cols-2 md:px-4 lg:grid-cols-2 lg:gap-8 lg:px-5">
-                <div className="w-full sm:text-center md:w-80 md:text-left">
+              <div className="grid items-center gap-6 px-2 sm:grid-cols-1 sm:px-3 md:grid-cols-2 md:px-4 lg:grid-cols-2 lg:gap-8 lg:px-5 ">
+                <div onClick={() =>
+                  window.open(
+                    "https://t.me/women_safety_assistant_bot",
+                    "_blank"
+                  )
+                } className="w-full sm:text-center md:w-80 md:text-left cursor-pointer hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 ">
                   <h3 className="text-lg md:text-3xl font-bold text-slate-900 mb-4 ">
                     Click to connect with <br />
                     <span className="text-purple-600">Telegram Bot</span>
@@ -340,7 +352,8 @@ const HomePage = () => {
                 </div>
 
                 <div className="flex justify-center sm:justify-center md:justify-end">
-                  <button className="inline-flex items-center gap-3 px-6 py-4 rounded-3xl bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
+                  <button
+                    className="inline-flex items-center gap-3 px-6 py-4 rounded-3xl bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
                     <div className="flex items-center justify-center w-15 h-15 bg-white rounded-full">
                       <TelegramIcon size={40} color="blue" />
                     </div>
@@ -775,7 +788,7 @@ const HomePage = () => {
                           <img
                             src="/Bot.png"
                             alt=""
-                            srcset=""
+                            srcSet=""
                             className="overflow-hidden rounded-full "
                           />
                         </span>
